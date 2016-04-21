@@ -17,6 +17,7 @@
 ### 版本说明：
 
 - v1.01 autolayout已完成
+- v1.02 autolayout改进
 
 ​								
 
