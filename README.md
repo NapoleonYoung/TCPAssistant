@@ -15,9 +15,12 @@
 - 页面颜色搭配
 
 ### 版本说明：
+- v1.02dev 页面颜色分支，白蓝色，按钮有篮框
+
+- v1.02 autolayout改进
 
 - v1.01 autolayout已完成
-- v1.02 autolayout改进
+
 
 ​								
 

@@ -68,9 +68,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    UIColor *bgColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"金属核心纹理.jpg"]];
+    //UIColor *bgColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"金属核心纹理.jpg"]];
     
-    self.view.backgroundColor = bgColor;
+    //self.view.backgroundColor = bgColor;
     
     self.connectedHostTextField.delegate = self;
     self.connectedPortTextField.delegate = self;
@@ -99,6 +99,50 @@
     self.sendButton4.layer.cornerRadius = 6;
     
     self.clearLogButton.layer.cornerRadius = 6;
+    
+    self.connectOrDisconnectButton.layer.borderWidth = 1.0f;
+    self.connectOrDisconnectButton.layer.borderColor = [[UIColor blueColor] CGColor];
+    self.sendButton1.layer.borderWidth = 1.0f;
+    self.sendButton1.layer.borderColor = [[UIColor blueColor] CGColor];
+    self.sendButton2.layer.borderWidth = 1.0f;
+    self.sendButton2.layer.borderColor = [[UIColor blueColor] CGColor];
+    self.sendButton3.layer.borderWidth = 1.0f;
+    self.sendButton3.layer.borderColor = [[UIColor blueColor] CGColor];
+    self.sendButton4.layer.borderWidth = 1.0f;
+    self.sendButton4.layer.borderColor = [[UIColor blueColor] CGColor];
+    self.clearLogButton.layer.borderWidth = 1.0f;
+    self.clearLogButton.layer.borderColor = [[UIColor blueColor] CGColor];
+    
+    self.receivedMessageTextView.layer.borderWidth = 1.0f;
+    self.receivedMessageTextView.layer.borderColor = [[UIColor blueColor] CGColor];
+    self.receivedMessageTextView.layer.cornerRadius = 6;
+    
+    self.connectedHostTextField.layer.borderWidth = 1.0f;
+    self.connectedPortTextField.layer.borderWidth = 1.0f;
+    self.connectedHostTextField.layer.cornerRadius = 6;
+    self.connectedPortTextField.layer.cornerRadius = 6;
+    self.connectedHostTextField.layer.borderColor = [[UIColor blueColor] CGColor];
+    self.connectedPortTextField.layer.borderColor = [[UIColor blueColor] CGColor];
+    
+    self.sendingMessageTextField1.layer.borderWidth = 1.0f;
+    self.sendingMessageTextField1.layer.borderColor = [[UIColor blueColor] CGColor];
+    self.sendingMessageTextField1.layer.cornerRadius = 6;
+    self.sendingMessageTextField2.layer.borderWidth = 1.0f;
+    self.sendingMessageTextField2.layer.borderColor = [[UIColor blueColor] CGColor];
+    self.sendingMessageTextField2.layer.cornerRadius = 6;
+    self.sendingMessageTextField3.layer.borderWidth = 1.0f;
+    self.sendingMessageTextField3.layer.borderColor = [[UIColor blueColor] CGColor];
+    self.sendingMessageTextField3.layer.cornerRadius = 6;
+    self.sendingMessageTextField4.layer.borderWidth = 1.0f;
+    self.sendingMessageTextField4.layer.borderColor = [[UIColor blueColor] CGColor];
+    self.sendingMessageTextField4.layer.cornerRadius = 6;
+
+    self.timeSettingTextField.layer.borderWidth = 1.0f;
+    self.timeSettingTextField.layer.borderColor = [[UIColor blueColor] CGColor];
+    self.timeSettingTextField.layer.cornerRadius = 6;
+    
+
+
 }
 
 - (void)startTimer
@@ -324,7 +368,7 @@
             self.sendButton3.backgroundColor = [UIColor darkGrayColor];
             self.sendButton4.enabled = NO;
             self.sendButton4.backgroundColor = [UIColor darkGrayColor];
-
+            
             break;
         }
         case 2:{//sendButton2
