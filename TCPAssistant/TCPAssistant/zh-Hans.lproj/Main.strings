@@ -14,9 +14,6 @@
 /* Class = "UIButton"; normalTitle = "send"; ObjectID = "dS2-mJ-7N2"; */
 "dS2-mJ-7N2.normalTitle" = "发送";
 
-/* Class = "UILabel"; text = "s"; ObjectID = "fuC-K3-Qlt"; */
-"fuC-K3-Qlt.text" = "秒";
-
 /* Class = "UIButton"; normalTitle = "DisConnect"; ObjectID = "hBd-cq-vQB"; */
 "hBd-cq-vQB.normalTitle" = "断开连接";
 
