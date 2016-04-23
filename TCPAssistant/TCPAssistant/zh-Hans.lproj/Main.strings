@@ -1,0 +1,39 @@
+
+/* Class = "UIButton"; normalTitle = "send"; ObjectID = "UeC-WJ-dc6"; */
+"UeC-WJ-dc6.normalTitle" = "发送";
+
+/* Class = "UIButton"; normalTitle = "send"; ObjectID = "YAW-Gr-Lbp"; */
+"YAW-Gr-Lbp.normalTitle" = "发送";
+
+/* Class = "UITextField"; placeholder = "54321"; ObjectID = "c9f-0Z-jbv"; */
+"c9f-0Z-jbv.placeholder" = "54321";
+
+/* Class = "UITextField"; placeholder = "250.250.250.250"; ObjectID = "cOu-x4-EqL"; */
+"cOu-x4-EqL.placeholder" = "250.250.250.250";
+
+/* Class = "UIButton"; normalTitle = "send"; ObjectID = "dS2-mJ-7N2"; */
+"dS2-mJ-7N2.normalTitle" = "发送";
+
+/* Class = "UILabel"; text = "s"; ObjectID = "fuC-K3-Qlt"; */
+"fuC-K3-Qlt.text" = "秒";
+
+/* Class = "UIButton"; normalTitle = "DisConnect"; ObjectID = "hBd-cq-vQB"; */
+"hBd-cq-vQB.normalTitle" = "断开连接";
+
+/* Class = "UIButton"; normalTitle = "send"; ObjectID = "jlj-1M-kq5"; */
+"jlj-1M-kq5.normalTitle" = "发送";
+
+/* Class = "UILabel"; text = "自动发送"; ObjectID = "rip-Cm-dfk"; */
+"rip-Cm-dfk.text" = "自动发送";
+
+/* Class = "UILabel"; text = "Log"; ObjectID = "sYK-zg-kVn"; */
+"sYK-zg-kVn.text" = "记录";
+
+/* Class = "UILabel"; text = "Please Connect First"; ObjectID = "sdp-12-2Un"; */
+"sdp-12-2Un.text" = "请连接";
+
+/* Class = "UILabel"; text = "发送周期"; ObjectID = "v01-xz-WDn"; */
+"v01-xz-WDn.text" = "发送周期(秒)";
+
+/* Class = "UIButton"; normalTitle = "clear"; ObjectID = "vxx-P9-TAb"; */
+"vxx-P9-TAb.normalTitle" = "清除";

@@ -58,8 +58,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *sendPeriodLabel;
 
-@property (weak, nonatomic) IBOutlet UILabel *secondLabel;
-
 @end
 
 @implementation ViewController
@@ -99,6 +97,7 @@
     self.sendButton4.layer.cornerRadius = 6;
     
     self.clearLogButton.layer.cornerRadius = 6;
+    self.receivedMessageTextView.layer.cornerRadius = 6;
 }
 
 - (void)startTimer
@@ -121,7 +120,7 @@
         }
     } else {//未连接服务器
         [self.activityIndicatior startAnimating];
-        self.notificationLabel.text = @"    Connecting...Waiting Please";//前面两个空格是为了给activity indicator腾出空间
+        self.notificationLabel.text = NSLocalizedString(@"Connecting...Waiting Please", nil);//前面两个空格是为了给activity indicator腾出空间
         
         self.sendingTimer = [NSTimer timerWithTimeInterval:CONNECTTIMEOUT
                                                     target:self
@@ -208,18 +207,18 @@
 {
     
     if (SOCKET.onLineFlag) {// 如果此时网络连接状态，将按钮标签设为“断开”
-        [self.connectOrDisconnectButton setTitle:@"Disconnect" forState:UIControlStateNormal];
+        [self.connectOrDisconnectButton setTitle:NSLocalizedString(@"DisConnect", nil) forState:UIControlStateNormal];
         //通知标签显示本地IP和Port
         self.notificationLabel.text = [NSString stringWithFormat:@"Local IP:%@ Port:%@", [[SOCKET localHostAndPort] valueForKey:LocalHost], [[SOCKET localHostAndPort] valueForKey:LocalPort]];
     } else {// 如果此时网络断开状态，将按钮标签设为“连接”
         
         NSLog(@"已断网");
         
-        [self.connectOrDisconnectButton setTitle:@"Connect" forState:UIControlStateNormal];
-        
+        //[self.connectOrDisconnectButton setTitle:@"Connect" forState:UIControlStateNormal];
+        [self.connectOrDisconnectButton setTitle:NSLocalizedString(@"Connect", nil) forState:UIControlStateNormal];
         //如果此时手机未联网，按下connect button后会立刻收到网络断开标志，此时activity indicator在转动，定时器在工作，因此首先需要停止
         [self stopTimer];
-        self.notificationLabel.text = @"Please Connect First";
+        self.notificationLabel.text = NSLocalizedString(@"Please Connect First", nil);
     }
 }
 
@@ -231,7 +230,7 @@
         [self sendMessage:self.buttonPressed];
     } else {
         [self.activityIndicatior stopAnimating];
-        self.notificationLabel.text = @"Please Connect First";
+        self.notificationLabel.text = NSLocalizedString(@"Please Connect First", nil);
     }
 }
 
@@ -254,11 +253,9 @@
     if (sender.on) {
         self.sendPeriodLabel.hidden = NO;
         self.timeSettingTextField.hidden = NO;
-        self.secondLabel.hidden = NO;
     } else {
         self.sendPeriodLabel.hidden = YES;
         self.timeSettingTextField.hidden = YES;
-        self.secondLabel.hidden = YES;
         
         //首先将button的title改回send
         //[self setButtonTitle:self.buttonPressed];
@@ -281,7 +278,7 @@
             //首先设置发送button状态
            // [self setButtonTitle:sender];
             
-            if ([sender.currentTitle isEqualToString:@"send"]) {
+            if ([sender.currentTitle isEqualToString:NSLocalizedString(@"send", nil)]) {
                 if (self.timeSettingTextField.text.length) {
                     self.buttonPressed = sender;
                     
@@ -290,12 +287,12 @@
                     [self setButtonStateToAuto:sender];
                 } else {
                     [self alertViewWithTitle:nil
-                                     message:@"time is null"
-                           cancelButtonTitle:@"YES"
+                                     message:NSLocalizedString(@"time is null", nil)
+                           cancelButtonTitle:NSLocalizedString(@"YES", nil)
                            otherButtonTitles:nil];
 
                 }
-            } else if ([sender.currentTitle isEqualToString:@"stop"]) {
+            } else if ([sender.currentTitle isEqualToString:NSLocalizedString(@"stop", nil)]) {
                 [self stopTimer];
                 [self setButtonStateToStopAuto];
                 NSLog(@"定时器关闭");
@@ -317,7 +314,7 @@
     int buttonTag = (int)button.tag;
     switch (buttonTag) {
         case 1:{//sendButton1
-            [self.sendButton1 setTitle:@"stop" forState:UIControlStateNormal];
+            [self.sendButton1 setTitle:NSLocalizedString(@"stop", nil) forState:UIControlStateNormal];
             self.sendButton2.enabled = NO;
             self.sendButton2.backgroundColor = [UIColor darkGrayColor];
             self.sendButton3.enabled = NO;
@@ -328,7 +325,7 @@
             break;
         }
         case 2:{//sendButton2
-            [self.sendButton2 setTitle:@"stop" forState:UIControlStateNormal];
+            [self.sendButton2 setTitle:NSLocalizedString(@"stop", nil) forState:UIControlStateNormal];
             self.sendButton1.enabled = NO;
             self.sendButton1.backgroundColor = [UIColor darkGrayColor];
 
@@ -341,7 +338,7 @@
             break;
         }
         case 3:{//sendButton3
-            [self.sendButton3 setTitle:@"stop" forState:UIControlStateNormal];
+            [self.sendButton3 setTitle:NSLocalizedString(@"stop", nil) forState:UIControlStateNormal];
             self.sendButton2.enabled = NO;
             self.sendButton2.backgroundColor = [UIColor darkGrayColor];
 
@@ -354,7 +351,7 @@
             break;
         }
         case 4:{//sendButton4
-            [self.sendButton4 setTitle:@"stop" forState:UIControlStateNormal];
+            [self.sendButton4 setTitle:NSLocalizedString(@"stop", nil) forState:UIControlStateNormal];
             self.sendButton2.enabled = NO;
             self.sendButton2.backgroundColor = [UIColor darkGrayColor];
 
@@ -368,7 +365,7 @@
         }
 
         default:{
-            [self.sendButton1 setTitle:@"stop" forState:UIControlStateNormal];
+            [self.sendButton1 setTitle:NSLocalizedString(@"stop", nil) forState:UIControlStateNormal];
             self.sendButton2.enabled = NO;
             self.sendButton2.backgroundColor = [UIColor darkGrayColor];
 
@@ -389,19 +386,19 @@
  */
 - (void)setButtonStateToStopAuto
 {
-    [self.sendButton1 setTitle:@"send" forState:UIControlStateNormal];
+    [self.sendButton1 setTitle:NSLocalizedString(@"send", nil) forState:UIControlStateNormal];
     self.sendButton1.enabled = YES;
     self.sendButton1.backgroundColor = [UIColor groupTableViewBackgroundColor];
     
-    [self.sendButton2 setTitle:@"send" forState:UIControlStateNormal];
+    [self.sendButton2 setTitle:NSLocalizedString(@"send", nil) forState:UIControlStateNormal];
     self.sendButton2.enabled = YES;
     self.sendButton2.backgroundColor = [UIColor groupTableViewBackgroundColor];
     
-    [self.sendButton3 setTitle:@"send" forState:UIControlStateNormal];
+    [self.sendButton3 setTitle:NSLocalizedString(@"send", nil) forState:UIControlStateNormal];
     self.sendButton3.enabled = YES;
     self.sendButton3.backgroundColor = [UIColor groupTableViewBackgroundColor];
     
-    [self.sendButton4 setTitle:@"send" forState:UIControlStateNormal];
+    [self.sendButton4 setTitle:NSLocalizedString(@"send", nil) forState:UIControlStateNormal];
     self.sendButton4.enabled = YES;
     self.sendButton4.backgroundColor = [UIColor groupTableViewBackgroundColor];
     
@@ -414,10 +411,10 @@
  */
 - (void)setButtonTitle:(UIButton *)button
 {
-    if ([button.currentTitle isEqualToString:@"send"]) {
-        [button setTitle:@"stop" forState:UIControlStateNormal];
-    } else if ([button.currentTitle isEqualToString:@"stop"]) {
-        [button setTitle:@"send" forState:UIControlStateNormal];
+    if ([button.currentTitle isEqualToString:NSLocalizedString(@"send", nil)]) {
+        [button setTitle:NSLocalizedString(@"stop", nil) forState:UIControlStateNormal];
+    } else if ([button.currentTitle isEqualToString:NSLocalizedString(@"stop", nil)]) {
+        [button setTitle:NSLocalizedString(@"send", nil) forState:UIControlStateNormal];
     }
 }
 

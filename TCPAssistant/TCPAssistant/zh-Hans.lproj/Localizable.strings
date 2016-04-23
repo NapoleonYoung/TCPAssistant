@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  TCPAssistant
+
+  Created by NapoleonYoung on 16/4/22.
+  Copyright © 2016年 DoubleWood. All rights reserved.
+*/
+
+/* 连接按钮 */
+"Connect" = "连接";
+"DisConnect" = "断开";
+
+/* Notification Label */
+"Please Connect First" = "请连接";
+"Connecting...Waiting Please" = "     连接中...请稍等";
+
+/* 自动发送相关 */
+"time is null" = "时间不能为空";
+"YES" = "确定";
+
+/* 发送按钮相关 */
+"send" = "发送";
+"stop" = "停止";
+
