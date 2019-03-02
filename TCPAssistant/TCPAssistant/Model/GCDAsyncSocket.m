@@ -1041,7 +1041,7 @@ enum GCDAsyncSocketConfig
 		__block id result;
 		
 		dispatch_sync(socketQueue, ^{
-			result = delegate;
+            result = self->delegate;
 		});
 		
 		return result;
@@ -1051,7 +1051,7 @@ enum GCDAsyncSocketConfig
 - (void)setDelegate:(id)newDelegate synchronously:(BOOL)synchronously
 {
 	dispatch_block_t block = ^{
-		delegate = newDelegate;
+        self->delegate = newDelegate;
 	};
 	
 	if (dispatch_get_specific(IsOnSocketQueueOrTargetQueueKey)) {

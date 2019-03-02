@@ -421,7 +421,7 @@
 - (void)sendMessage:(UIButton *) sender
 {
     if (sender == self.sendButton1) {
-#warning 此处是否需要验证textField中文本是否为空
+//#warning 此处是否需要验证textField中文本是否为空
         [SOCKET sendOutData:self.sendingMessageTextField1.text withTag:0];
     } else if (sender == self.sendButton2) {
         [SOCKET sendOutData:self.sendingMessageTextField2.text withTag:0];

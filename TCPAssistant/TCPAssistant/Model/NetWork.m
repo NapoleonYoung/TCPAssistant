@@ -63,7 +63,7 @@
  */
 - (NSDictionary *)localHostAndPort
 {
-#warning 此处逻辑不是很合理
+//#warning 此处逻辑不是很合理
     if (self.gcdAnsynSocket.isConnected) {
         NSString *localHost = self.gcdAnsynSocket.localHost;
         NSString *localPort = [NSString stringWithFormat:@"%d", self.gcdAnsynSocket.localPort];
@@ -117,7 +117,7 @@
 - (void)connectToHost:(NSString *)host Port:(uint16_t)port withTimeout:(NSTimeInterval)interval
 {
     NSError *error;
-    BOOL result = [self.gcdAnsynSocket connectToHost:host onPort:port withTimeout:interval error:&error];
+    //BOOL result = [self.gcdAnsynSocket connectToHost:host onPort:port withTimeout:interval error:&error];
     
     NSLog(@"Host:%@, Port:%hu", host, port);
     
