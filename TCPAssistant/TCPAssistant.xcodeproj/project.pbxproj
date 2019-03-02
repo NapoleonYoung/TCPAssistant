@@ -18,8 +18,8 @@
 		0AF8E4881C1920C700350B0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF8E4861C1920C700350B0B /* LaunchScreen.storyboard */; };
 		0AF8E4931C1920C800350B0B /* TCPAssistantTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E4921C1920C800350B0B /* TCPAssistantTests.m */; };
 		0AF8E49E1C1920C800350B0B /* TCPAssistantUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E49D1C1920C800350B0B /* TCPAssistantUITests.m */; };
-		0AF8E4AD1C19324500350B0B /* NetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E4AC1C19324500350B0B /* NetWork.m */; };
-		0AF8E4B01C19325600350B0B /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8E4AF1C19325600350B0B /* GCDAsyncSocket.m */; };
+		0EE3BB75222A7B2C00A55C74 /* NetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE3BB72222A7B2C00A55C74 /* NetWork.m */; };
+		0EE3BB76222A7B2C00A55C74 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE3BB74222A7B2C00A55C74 /* GCDAsyncSocket.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,10 +65,10 @@
 		0AF8E4991C1920C800350B0B /* TCPAssistantUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCPAssistantUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF8E49D1C1920C800350B0B /* TCPAssistantUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCPAssistantUITests.m; sourceTree = "<group>"; };
 		0AF8E49F1C1920C800350B0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0AF8E4AB1C19324500350B0B /* NetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWork.h; sourceTree = "<group>"; };
-		0AF8E4AC1C19324500350B0B /* NetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWork.m; sourceTree = "<group>"; };
-		0AF8E4AE1C19325600350B0B /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
-		0AF8E4AF1C19325600350B0B /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		0EE3BB71222A7B2C00A55C74 /* NetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetWork.h; path = Model/NetWork.h; sourceTree = "<group>"; };
+		0EE3BB72222A7B2C00A55C74 /* NetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetWork.m; path = Model/NetWork.m; sourceTree = "<group>"; };
+		0EE3BB73222A7B2C00A55C74 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Model/GCDAsyncSocket.h; sourceTree = "<group>"; };
+		0EE3BB74222A7B2C00A55C74 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Model/GCDAsyncSocket.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,10 +176,10 @@
 		0AF8E4B11C19326300350B0B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0AF8E4AB1C19324500350B0B /* NetWork.h */,
-				0AF8E4AC1C19324500350B0B /* NetWork.m */,
-				0AF8E4AE1C19325600350B0B /* GCDAsyncSocket.h */,
-				0AF8E4AF1C19325600350B0B /* GCDAsyncSocket.m */,
+				0EE3BB71222A7B2C00A55C74 /* NetWork.h */,
+				0EE3BB72222A7B2C00A55C74 /* NetWork.m */,
+				0EE3BB73222A7B2C00A55C74 /* GCDAsyncSocket.h */,
+				0EE3BB74222A7B2C00A55C74 /* GCDAsyncSocket.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -325,10 +325,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EE3BB76222A7B2C00A55C74 /* GCDAsyncSocket.m in Sources */,
 				0AF8E4801C1920C700350B0B /* ViewController.m in Sources */,
-				0AF8E4B01C19325600350B0B /* GCDAsyncSocket.m in Sources */,
+				0EE3BB75222A7B2C00A55C74 /* NetWork.m in Sources */,
 				0AF8E47D1C1920C700350B0B /* AppDelegate.m in Sources */,
-				0AF8E4AD1C19324500350B0B /* NetWork.m in Sources */,
 				0AF8E47A1C1920C700350B0B /* main.m in Sources */,
 				0ADE763D1CA4ECB80047FFB9 /* ShowTextFieldViewController.m in Sources */,
 			);
